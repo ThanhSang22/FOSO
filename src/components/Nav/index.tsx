@@ -28,7 +28,7 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             <img src="/images/Sale.png" alt="Check" className="h-4" />
             <span>
-              Nhập mã <span className="font-bold text-yellow">NEWBIE</span> giảm
+              Nhập mã <span className="font-bold text-[#FACA4A]">NEWBIE</span> giảm
               ngay 10% cho lần đầu mua hàng.
             </span>
           </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
               <FaPhoneAlt className="text-white text-xs" />
               <span>
                 Hotline:{" "}
-                <span className="text-yellow font-semibold">0283 760 7607</span>
+                <span className="text-[#FACA4A] font-semibold">0283 760 7607</span>
               </span>
             </div>
             <div className="flex items-center gap-1">

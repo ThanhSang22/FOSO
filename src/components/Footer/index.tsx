@@ -45,14 +45,14 @@ const Footer = () => {
       </div>
       <footer className="bg-[#F8FBFF] text-sm text-gray-700 bg-bgFooter bg-no-repeat bg-cover">
         <div className="bg-[#EAF2FD] px-6 py-4">
-          <div className="flex justify-between items-center gap-2 container mx-auto">
+          <div className="flex justify-between items-center gap-2 container !p-0 mx-auto">
             <div className="flex items-center gap-2">
               <img src="/images/end icon.png" alt="Map" className="h-5" />
               <span className="font-medium">
                 Xem hệ thống 88 cửa hàng trên toàn quốc
               </span>
             </div>
-            <button className="bg-white text-blue-600 font-medium px-4 py-1 rounded-full border hover:shadow">
+            <button className="bg-white text-blue-600 font-medium px-4 py-1 rounded-full border hover:shadow whitespace-nowrap">
               Xem ngay →
             </button>
           </div>
@@ -88,46 +88,48 @@ const Footer = () => {
             />
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-2">Sitemap</h4>
-            <ul className="space-y-1">
-              <li>About</li>
-              <li>Article</li>
-              <li>Cart</li>
-              <li>Contact</li>
-            </ul>
-          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 xl:gap-8">
+            <div>
+              <h4 className="font-semibold mb-2">Sitemap</h4>
+              <ul className="space-y-1">
+                <li>About</li>
+                <li>Article</li>
+                <li>Cart</li>
+                <li>Contact</li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="font-semibold mb-2">Legal</h4>
-            <ul className="space-y-1">
-              <li className="font-bold">— Privacy Policy</li>
-              <li>Cookie policy</li>
-              <li>Delivery policy</li>
-              <li>FAQs</li>
-            </ul>
-          </div>
+            <div>
+              <h4 className="font-semibold mb-2">Legal</h4>
+              <ul className="space-y-1">
+                <li className="font-bold">— Privacy Policy</li>
+                <li>Cookie policy</li>
+                <li>Delivery policy</li>
+                <li>FAQs</li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="font-semibold mb-2">Download App</h4>
-            <div className="space-y-3">
-              <button className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-lg">
-                <FaGooglePlay className="text-[36px]" />
-                <div className="flex flex-col items-start text-base font-semibold">
-                  <p className="font-normal text-sm">Get it on</p>
-                  Google Play Store
+            <div className="col-span-2 md:col-span-1">
+              <h4 className="font-semibold mb-2">Download App</h4>
+              <div className="space-y-3">
+                <button className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-lg min-w-[215px] md:w-full">
+                  <FaGooglePlay className="text-[36px]" />
+                  <div className="flex flex-col items-start text-base font-semibold">
+                    <p className="font-normal text-sm">Get it on</p>
+                    Google Play Store
+                  </div>
+                </button>
+                <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg min-w-[215px] md:w-full">
+                  <FaApple className="text-[36px]" />{" "}
+                  <div className="flex flex-col items-start text-base font-semibold">
+                    <p className="font-normal text-sm">Download from</p>
+                    Apple App Store
+                  </div>{" "}
+                </button>
+                <div className="flex items-center gap-2">
+                  <img src="/images/vn.svg" alt="vn" className="size-6" />
+                  VI <RiArrowDropDownLine className="text-lg" />
                 </div>
-              </button>
-              <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg w-full">
-                <FaApple className="text-[36px]" />{" "}
-                <div className="flex flex-col items-start text-base font-semibold">
-                  <p className="font-normal text-sm">Download from</p>
-                  Apple App Store
-                </div>{" "}
-              </button>
-              <div className="flex items-center gap-2">
-                <img src="/images/vn.svg" alt="vn" className="size-6" />
-                VI <RiArrowDropDownLine className="text-lg" />
               </div>
             </div>
           </div>

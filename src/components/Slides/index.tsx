@@ -19,7 +19,7 @@ const Slides = () => {
   return (
     <div className="flex flex-col">
       <img src="/images/banner.png" alt="banner" className="w-full" />
-      <div className="flex justify-center items-center bg-[#025FCA] shadow-[2px_15px_25px_0px_#6B72800A] p-12 rounded-b-xl">
+      <div className="flex justify-center items-center bg-[#025FCA] shadow-[2px_15px_25px_0px_#6B72800A] p-6 lg:p-12 rounded-b-xl">
         <div className="relative w-full max-w-[1280px]">
           <Swiper
             slidesPerView={2.5}

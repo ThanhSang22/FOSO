@@ -52,24 +52,26 @@ const Products = () => {
             <h2 className="text-lg font-semibold">Danh sách sản phẩm</h2>
 
             <div className="flex flex-wrap items-center gap-3 text-sm">
-              <span className="text-gray-600">Sắp xếp theo</span>
+              <div className="flex flex-wrap items-center gap-3 justify-between">
+                <span className="text-gray-600">Sắp xếp theo</span>
 
-              {sortOptions.map((option) => (
-                <button
-                  key={option.value}
-                  onClick={() => setActive(option.value)}
-                  className={`px-3 py-1 rounded-md border transition-all ${
-                    active === option.value
-                      ? "border-blue-500 text-blue-500 font-medium"
-                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                  }`}
-                >
-                  {option.label}
-                </button>
-              ))}
+                {sortOptions.map((option) => (
+                  <button
+                    key={option.value}
+                    onClick={() => setActive(option.value)}
+                    className={`px-3 py-1 rounded-md border transition-all ${
+                      active === option.value
+                        ? "border-blue-500 text-blue-500 font-semibold"
+                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    }`}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
 
               <button className="flex items-center gap-1 text-sm text-gray-800 hover:text-black">
-                Giá: Thấp → Cao
+                <b className='font-bold'>Giá:</b> Thấp → Cao
                 <BiChevronDown size={16} />
               </button>
             </div>

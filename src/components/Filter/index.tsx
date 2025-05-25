@@ -104,7 +104,7 @@ const Filter = () => {
                   section.options.map((opt, idx) => (
                     <label
                       key={idx}
-                      className="flex items-center mb-2 space-x-2"
+                      className="flex items-center mb-2 space-x-2 cursor-pointer"
                     >
                       <input type="checkbox" />
                       <span>

@@ -44,11 +44,11 @@ const Products = () => {
     >
       <Slides />
       <div className="flex gap-5 w-full" ref={listsRef}>
-        <div className="sticky top-0">
+        <div className="sticky top-0 lg:flex hidden">
           <Filter />
         </div>
         <div className="w-full">
-          <div className="flex items-center justify-between gap-4 py-4 border-b border-gray-100 w-full">
+          <div className="flex xl:flex-row flex-col items-center justify-between gap-4 py-4 border-b border-gray-100 w-full">
             <h2 className="text-lg font-semibold">Danh sách sản phẩm</h2>
 
             <div className="flex flex-wrap items-center gap-3 text-sm">
@@ -74,7 +74,7 @@ const Products = () => {
               </button>
             </div>
           </div>
-          <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 mt-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
             {productList.slice(0, visibleCount).map((product, index) => {
               const discount = Math.round(
                 ((product.oldPrice - product.price) / product.oldPrice) * 100

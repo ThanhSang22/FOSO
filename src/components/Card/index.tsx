@@ -29,33 +29,31 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
       {isHotDeal && (
         <div className="flex items-center space-x-2">
-          <span className="text-sm text-white bg-yellow-400 px-3 py-1 rounded-full font-medium flex items-center">
-            <span role="img" aria-label="fire">
-              🔥
-            </span>{" "}
+          <span className="text-sm text-[#B71D18] gradientWarning px-3 py-1 rounded-full font-semibold flex items-center gap-[6px]">
+            <img src="/images/icons/fire.svg" alt="fire" className="size-4 aspect-square"/>
             Giá cực sốc
           </span>
         </div>
       )}
 
-      <div className="font-semibold text-gray-800 leading-tight line-clamp-2 min-h-10">
+      <div className="font-semibold text-[#1C252E] text-sm xl:text-base leading-tight line-clamp-2 min-h-10">
         {title}
       </div>
 
-      <div className="text-red-600 text-xl font-bold">
+      <div className="text-[#B71D18] text-lg xl:text-xl font-bold">
         {price.toLocaleString()} đ
       </div>
 
       {originalPrice && discount && (
         <div className="flex items-center space-x-2 text-sm">
-          <span className="line-through text-gray-400">
+          <span className="line-through text-[#919EAB]">
             {originalPrice.toLocaleString()} đ
           </span>
-          <span className="text-red-500">-{discount}%</span>
+          <span className="text-[#B71D18] font-medium">-{discount}%</span>
         </div>
       )}
 
-      <button className="w-full bg-blue-100 text-blue-600 cursor-pointer font-semibold py-2 rounded-xl hover:bg-blue-200 transition">
+      <button className="w-full bg-[#E6F1FF] text-[#025FCA] cursor-pointer font-bold py-2 rounded-lg hover:bg-blue-200 transition text-sm flex items-center justify-center h-9">
         Mua ngay
       </button>
     </div>

@@ -1,7 +1,7 @@
 export const productList = [
   {
     id: 1,
-    name: "Lọc dầu ô tô – Toyota Vios",
+    name: "Lọc gió động cơ Air Filter – Chevrolet Colorado, Trailblazer (52046262)",
     image: "/images/product1.png",
     price: 299000,
     oldPrice: 329000,

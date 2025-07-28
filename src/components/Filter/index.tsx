@@ -68,8 +68,8 @@ const Filter = () => {
   };
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 w-[315px] h-fit">
-      <h2 className="font-semibold text-2xl mb-4 flex items-center space-x-3 text-[#0373F3]">
+    <div className="bg-white shadow-md rounded-lg w-[315px] h-fit">
+      <h2 className="font-bold text-lg xl:text-2xl mb-4 p-4 flex items-center space-x-3 text-[#0373F3]">
         <img src="/images/icons/filter.svg" alt="filter" className="size-8" />
         Bộ lọc
       </h2>
@@ -80,22 +80,14 @@ const Filter = () => {
         return (
           <div
             key={section.name}
-            className={`mb-4 ${
-              index === filterOptions.length - 1
-                ? ""
-                : "border-b border-[#919EAB33] pb-3"
-            }`}
+            className={`p-3 border-t border-[#919EAB33] pb-3`}
           >
             <div
               className="flex items-center justify-between cursor-pointer mb-2"
               onClick={() => toggleSection(section.name)}
             >
-              <h3 className="font-semibold text-base">{section.title}</h3>
-              {isOpen ? (
-                <FaChevronUp className="text-gray-500 text-sm" />
-              ) : (
-                <FaChevronDown className="text-gray-500 text-sm" />
-              )}
+              <h3 className="font-semibold text-base xl:text-xl text-[#1C252E]">{section.title}</h3>
+              <img src="/images/icons/dropBlack.svg" alt="drop" className={`size-6 aspect-square transition-all duration-300 ${isOpen ? "rotate-180" : ""}`} />
             </div>
 
             {isOpen && (
@@ -104,12 +96,14 @@ const Filter = () => {
                   section.options.map((opt, idx) => (
                     <label
                       key={idx}
-                      className="flex items-center mb-2 space-x-2 cursor-pointer"
+                      className="flex items-center mb-2 space-x-2 cursor-pointer text-sm"
                     >
                       <input type="checkbox" />
-                      <span>
+                      <span className="text-[#1C252E] font-medium">
                         {opt.label}
-                        {"count" in opt ? ` (${opt.count})` : ""}
+                        <span className="text-[#637381] font-normal">
+                          {"count" in opt ? ` (${opt.count})` : ""}
+                        </span>
                       </span>
                     </label>
                   ))}
@@ -118,7 +112,7 @@ const Filter = () => {
                   section.options.map((opt, idx) => (
                     <button
                       key={idx}
-                      className="w-full mb-2 p-2 border rounded text-sm hover:bg-gray-100"
+                      className="w-full mb-2 p-2 border border-[#919EAB3D] h-9 font-normal rounded text-sm text-[#1C252E] hover:bg-gray-100"
                     >
                       {opt.label}
                     </button>

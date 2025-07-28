@@ -27,9 +27,9 @@ const NavMobile = ({ onClick }: NavMobileProps) => {
         <input
           type="text"
           placeholder="Tìm sản phẩm"
-          className="flex-1 outline-none text-disabled placeholder:text-disabled"
+          className="flex-1 outline-none text-[#919EAB] placeholder:text-[#919EAB]"
         />
-        <FiCamera className="mx-2 text-gray-500" />
+        <img src="/images/icons/Camera.svg" alt="vn" className="size-5 mr-2.5" />
         <button className="text-white bg-blue-600 py-3 px-6 rounded-full cursor-pointer">
           <FiSearch />
         </button>

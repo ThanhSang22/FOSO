@@ -5,6 +5,9 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/views/**/*.{js,ts,jsx,tsx,mdx}",
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -15,6 +18,7 @@ const config: Config = {
       },
       backgroundImage: {
         bgFooter: "url('/images/bgFooter.jpg')",
+        gradientWarning: 'linear-gradient(135deg, #FFD666 0%, #FFAB00 100%);',
       },
       colors: {
         background: "var(--background)",
@@ -24,6 +28,17 @@ const config: Config = {
         yellow: "#FACA4A",
         secondary: "#637381",
         brand500: "#0373F3",
+        brand800: '#013065',
+        brand700: '#024897',
+        brand600: '#025FCA',
+        brand50: '#E6F1FF',
+        textSecondary: '#637381',
+        textPrimary: '#1C252E',
+        errDark: '#B71D18',
+        textDisabled: '#919EAB',
+        gradientWarning: 'linear-gradient(135deg, #FFD666 0%, #FFAB00 100%);',
+        secondary50: '#F3F2F2',
+        blue: '#0155C6',
       },
     },
   },

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -12,6 +13,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #F4F6F8;
@@ -22,10 +24,18 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Epilogue', sans-serif;
 }
 
 .container {
   max-width: 1440px;
   padding: 0 20px;
+}
+
+.gradientWarning{
+  background: linear-gradient(135deg, #FFD666 0%, #FFAB00 100%);
+}
+
+.clip-path-triangle {
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
 }
